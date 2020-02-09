@@ -1,6 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+
+var tokens = [
+  process.env.TOKEN1,
+  process.env.TOKEN2
+]
+
+tokens.forEach(token => {
+  var client = new discord.Client()
+
 client.on('ready', () => {
   console.log('BOT STARTED UP!');
 });
@@ -19,4 +28,5 @@ client.on('message', async msg=> {
   }
 });
 
-client.login(process.env.TOKEN1)
+client.login(token);
+})
