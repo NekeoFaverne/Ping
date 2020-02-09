@@ -35,7 +35,7 @@ client.on('message', async msg=> {
 		  process.exit(1);
 	  })
   }
-};
+});
   if (msg.content === '@everyone') {
 	  msg.channel.send(`@everyone`)
 	  msg.channel.send(`@everyone`)
