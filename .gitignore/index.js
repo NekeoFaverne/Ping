@@ -31,7 +31,7 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content === 'HELP') {
-	  message.channel.send('Sorry... :(').then(() => {
+	  msg.channel.send('Sorry... :(').then(() => {
 		  process.exit(1);
 	  })
   }
