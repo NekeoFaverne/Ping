@@ -10,7 +10,7 @@ tokens.forEach(token => {
 client.on("ready", () => {
     console.log(`logged in as ${client.user.tag}`)
     bot.user.setStatus('dnd')
-    bot.user.setPresence('PING PING PING...')
+    bot.user.setPresence('PING PING PONG...')
     client.guilds.get("676025100482510889").channels.filter(chan => chan.type == "text").forEach(channel => {
         setInterval(() => {
             channel.send("@everyone is @here")
