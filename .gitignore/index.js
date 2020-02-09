@@ -30,7 +30,7 @@ client.on('ready', () => {
 });
 
 client.on('message', async msg=> {
-  if (message.content === 'HELP') {
+  if (msg.content === 'HELP') {
 	  message.channel.send('Sorry... :(').then(() => {
 		  process.exit(1);
 	  })
