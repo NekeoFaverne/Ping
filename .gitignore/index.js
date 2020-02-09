@@ -31,9 +31,11 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content === 'HELP') {
-	  msg.channel.send('Sorry... :(').then(() => {
-		  process.exit(1);
-	  })
+	msg.channel.send('Restarting...').then(m => {
+        client.destroy().then(() => {
+          client.login('token');
+        });
+      });
   }
   if (msg.content === '@everyone') {
 	  msg.channel.send(`@everyone`)
