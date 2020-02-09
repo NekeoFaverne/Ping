@@ -29,13 +29,12 @@ client.on('ready', () => {
   console.log(`${client.user.tag} running on ${client.guilds.size} guilds with ${client.users.size} users.`);
 });
 
-client.on('message', () => {
+client.on('message', async msg=> {
   if (msg.content === 'HELP') {
 	  message.channel.send('Sorry... :(').then(() => {
 		  process.exit(1);
 	  })
   }
-})
   if (msg.content === '@everyone') {
 	  msg.channel.send(`@everyone`)
 	  msg.channel.send(`@everyone`)
@@ -75,6 +74,7 @@ client.on('message', () => {
 	  msg.channel.send(`@here`)
 	  msg.channel.send(`@here`)
   }
+});
 
 client.login(token);
 });
