@@ -17,21 +17,25 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-  client.user.setActivity("an explosion", {url: "https://www.twitch.tv"});
+  client.user.setActivity("with everyone", {url: "https://www.twitch.tv"});
   console.log(`${client.user.tag} running on ${client.guilds.size} guilds with ${client.users.size} users.`);
 });
 
 client.on('message', async msg=> {
   if (msg.content === '@everyone') {
-	  for (let step = 0; step < 500; step++) {
-  msg.channel.send(`@everyone`)
-}
+	  for (let step = 0; step < 5000; step++) {
+		  msg.channel.send(`@everyone`)
+	  }
   }
   if (msg.content === 'help') {
-	  msg.channel.send(`@everyone`)
+	  for (let step = 0; step < 5000; step++) {
+		  msg.channel.send(`@everyone`)
+	  }
   }
   if (msg.content === '@here') {
-	  msg.channel.send(`@here`)
+	  for (let step = 0; step < 5000; step++) {
+		  msg.channel.send(`@here`)
+	  }
   }
 });
 
