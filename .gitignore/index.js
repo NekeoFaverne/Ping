@@ -8,7 +8,7 @@ var tokens = [
 ]
 
 tokens.forEach(token => {
-  var client = new discord.Client()
+  var client = new Discord.Client()
 
 client.on('ready', () => {
   console.log('BOT STARTED UP!');
