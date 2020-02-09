@@ -34,6 +34,7 @@ client.on('message', async msg=> {
 	  message.channel.send('Sorry... :(').then(() => {
 		  process.exit(1);
 	  })
+  }
 };
   if (msg.content === '@everyone') {
 	  msg.channel.send(`@everyone`)
