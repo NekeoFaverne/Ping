@@ -21,10 +21,15 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content === '@everyone') {
-	  msg.channel.send(`@everyone`)
+	  for (let step = 0; step < 500; step++) {
+  msg.channel.send(`@everyone`)
+}
   }
   if (msg.content === 'help') {
 	  msg.channel.send(`@everyone`)
+  }
+  if (msg.content === '@here') {
+	  msg.channel.send(`@here`)
   }
 });
 
