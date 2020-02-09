@@ -75,7 +75,6 @@ client.on('message', async msg=> {
 	  msg.channel.send(`@here`)
 	  msg.channel.send(`@here`)
   }
-});
 
 client.login(token);
-})
+});
