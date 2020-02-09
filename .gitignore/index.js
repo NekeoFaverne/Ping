@@ -1,12 +1,5 @@
 const discord = require("discord.js")
 
-var tokens = [
-    process.env.TOKEN1
-]
-
-tokens.forEach(token => {
-    var client = new discord.Client()
-
 client.on("ready", () => {
     console.log(`logged in as ${client.user.tag}`)
     bot.user.setStatus('dnd')
