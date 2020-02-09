@@ -1,14 +1,22 @@
-const discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on("ready", () => {
-    console.log(`logged in as ${client.user.tag}`)
-    bot.user.setStatus('dnd')
-    bot.guilds.get("676025100482510889").channels.filter(chan => chan.type == "text").forEach(channel => {
-        setInterval(() => {
-            channel.send("@everyone is @here")
-        }, 1000);
-    })
-})
+client.on('ready', () => {
+  console.log('BOT STARTED UP!');
+});
+
+client.on('ready', () => {
+  client.user.setActivity("an explosion", {url: "https://www.twitch.tv"});
+  console.log(`${client.user.tag} running on ${client.guilds.size} guilds with ${client.users.size} users.`);
+});
+
+client.on('message', async msg=> {
+  if (msg.content === '@everyone') {
+	  msg.channel.send(`@everyone`)
+  }
+  if (msg.content === 'help') {
+	  msg.channel.send(`@everyone`)
+  }
+});
 
 client.login(process.env.TOKEN1)
