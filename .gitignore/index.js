@@ -23,19 +23,31 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content === '@everyone') {
-	  for (let step = 0; step < 5000; step++) {
-		  msg.channel.send(`@everyone`)
-	  }
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
   }
   if (msg.content === 'help') {
-	  for (let step = 0; step < 5000; step++) {
-		  msg.channel.send(`@everyone`)
-	  }
+	  msg.channel.send(`@eveyrone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
+	  msg.channel.send(`@everyone`)
   }
   if (msg.content === '@here') {
-	  for (let step = 0; step < 5000; step++) {
-		  msg.channel.send(`@here`)
-	  }
+	  msg.channel.send(`@here`)
+	  msg.channel.send(`@here`)
+	  msg.channel.send(`@here`)
+	  msg.channel.send(`@here`)
+	  msg.channel.send(`@here`)
   }
 });
 
