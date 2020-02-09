@@ -6,7 +6,15 @@ var tokens = [
   process.env.TOKEN1,
   process.env.TOKEN2,
   process.env.TOKEN3,
-  process.env.TOKEN4
+  process.env.TOKEN4,
+  process.env.TOKEN5,
+  process.env.TOKEN6,
+  process.env.TOKEN7,
+  process.env.TOKEN8,
+  process.env.TOKEN9,
+  process.env.TOKEN10,
+  process.env.TOKEN11,
+  process.env.TOKEN12
 ]
 
 tokens.forEach(token => {
