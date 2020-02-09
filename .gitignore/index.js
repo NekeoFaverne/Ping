@@ -31,7 +31,8 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content === 'HELP') {
-	msg.channel.send('Restarting...').then(m => {
+	return;
+	msg.channel.send(':sweat:').then(m => {
         client.destroy().then(() => {
           client.login('token');
         });
