@@ -4,7 +4,9 @@ const client = new Discord.Client();
 
 var tokens = [
   process.env.TOKEN1,
-  process.env.TOKEN2
+  process.env.TOKEN2,
+  process.env.TOKEN3,
+  process.env.TOKEN4
 ]
 
 tokens.forEach(token => {
