@@ -1,6 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+const reboot = new Promise(resolve => {
+  client.kill('SIGTERM');
+  client = spawn('node', ['index'], {
+    cwd: path.join(__dirname, 'client'),
+    env: process.env
+  });
+  resolve();
+});
 
 var tokens = [
   process.env.TOKEN1,
@@ -30,12 +37,9 @@ client.on('ready', () => {
 });
 
 client.on('message', async msg=> {
-  if (msg.content === 'HELP') {
-	msg.channel.send('Triste...').then(() => {
-        client.destroy().then(() => {
-          client.login('token');
-        });
-      });
+  if (msg.content == 'HELP') {
+    msg.channel.sendMessage('Triste...')
+    reboot().catch(console.log);
   }
   if (msg.content === '@everyone') {
 	  msg.channel.send(`@everyone`)
