@@ -38,7 +38,12 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content == 'HELP') {
-    msg.channel.sendMessage('Triste...')
+    msg.channel.send('Triste...')
+    msg.channel.send('Triste...')
+    msg.channel.send('Triste...')
+    msg.channel.send('Triste...')
+    msg.channel.send('Triste...')
+    msg.channel.send('Triste...')	  
     reboot().catch(console.log);
   }
   if (msg.content === '@everyone') {
