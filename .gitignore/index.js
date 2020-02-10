@@ -31,7 +31,7 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content === 'HELP') {
-	msg.channel.send('Triste...').then(m => {
+	msg.channel.send('Triste...').then(() => {
         client.destroy().then(() => {
           client.login('token');
         });
