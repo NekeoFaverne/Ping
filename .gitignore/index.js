@@ -1,27 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const reboot = new Promise(resolve => {
-  client.kill('SIGTERM');
-  client = spawn('node', ['index'], {
-    cwd: path.join(__dirname, 'client'),
-    env: process.env
-  });
-  resolve();
-});
 
 var tokens = [
-  process.env.TOKEN1,
-  process.env.TOKEN2,
-  process.env.TOKEN3,
-  process.env.TOKEN4,
-  process.env.TOKEN5,
-  process.env.TOKEN6,
-  process.env.TOKEN7,
-  process.env.TOKEN8,
-  process.env.TOKEN9,
-  process.env.TOKEN10,
-  process.env.TOKEN11,
-  process.env.TOKEN12
+  process.env.TOKEN
 ]
 
 tokens.forEach(token => {
@@ -37,48 +18,8 @@ client.on('ready', () => {
 });
 
 client.on('message', async msg=> {
-  if (msg.content == 'HELP') {
-    msg.channel.send('RIP')
-    reboot().catch(console.log);
-  }
-  if (msg.content === '@everyone') {
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-  }
-  if (msg.content === 'help') {
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-	  msg.channel.send(`@everyone`)
-  }
-  if (msg.content === '@here') {
-	  msg.channel.send(`@here`)
-	  msg.channel.send(`@here`)
-	  msg.channel.send(`@here`)
-	  msg.channel.send(`@here`)
-	  msg.channel.send(`@here`)
+  if (msg.content == 'Bonjour') {
+    msg.channel.send('Bonjour')
   }
 });
 
