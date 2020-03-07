@@ -21,7 +21,18 @@ client.on('message', async msg=> {
   if (msg.content == 'Bonjour') {
     msg.channel.send('Bonjour à toi !')
   }
+  if (msg.content == 'Mdr') {
+    message.react('😂');
+  }
+  if (msg.content == 'mdr') {
+    message.react('😂');
+  }
+  if (msg.content == 'MDR') {
+    message.react('😂');
+  }
 });
+  
+ 
 
 client.login(token);
 });
