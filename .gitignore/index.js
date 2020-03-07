@@ -19,7 +19,7 @@ client.on('ready', () => {
 
 client.on('message', async msg=> {
   if (msg.content == 'Bonjour') {
-    msg.channel.send('Bonjour')
+    msg.channel.send('Bonjour à toi !')
   }
 });
 
