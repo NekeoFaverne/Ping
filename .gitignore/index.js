@@ -22,13 +22,13 @@ client.on('message', async msg=> {
     msg.channel.send('Bonjour à toi !')
   }
   if (msg.content == 'Mdr') {
-    message.react('😂');
+    msg.react('😂');
   }
   if (msg.content == 'mdr') {
-    message.react('😂');
+    msg.react('😂');
   }
   if (msg.content == 'MDR') {
-    message.react('😂');
+    msg.react('😂');
   }
 });
   
