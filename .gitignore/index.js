@@ -13,7 +13,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-  client.user.setActivity("with everyone", {url: "https://www.twitch.tv"});
+  client.user.setActivity("med glede!", {url: "https://www.twitch.tv"});
   console.log(`${client.user.tag} running on ${client.guilds.size} guilds with ${client.users.size} users.`);
 });
 
